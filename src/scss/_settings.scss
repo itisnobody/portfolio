@@ -1,5 +1,9 @@
 html {
   box-sizing: border-box;
+  height: 100%;
+  font-family: var(--font-family);
+  font-size: var(--rem);
+  -webkit-text-size-adjust: 100%;
 }
 
 *,
@@ -8,17 +12,10 @@ html {
   box-sizing: inherit;
 }
 
-.page {
-  height: 100%;
-  font-family: var(--font-family, sans-serif);
-  -webkit-text-size-adjust: 100%;
-}
-
-.page__body {
-  margin: 0;
+body {
   min-width: 320px;
   min-height: 100%;
-  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 img {
@@ -88,10 +85,6 @@ a {
   outline: none;
 }
 
-.centered {
-  text-align: center;
-}
-
 .dis-scroll {
   position: fixed;
   left: 0;
@@ -102,6 +95,6 @@ a {
   overscroll-behavior: none;
 }
 
-.page--ios .dis-scroll {
+.ios .dis-scroll {
   position: relative;
 }
