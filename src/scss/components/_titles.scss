@@ -1,0 +1,20 @@
+.title {
+  margin: 0;
+  color: #000;
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 6rem;
+  &--fs14 {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+  }
+  &--fs16 {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+  &--fs48 {
+    font-size: 4.8rem;
+  }
+}

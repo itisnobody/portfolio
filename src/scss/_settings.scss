@@ -1,7 +1,10 @@
 html {
   box-sizing: border-box;
   height: 100%;
+  color: #000;
   font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 500;
   font-size: var(--rem);
   -webkit-text-size-adjust: 100%;
 }
@@ -97,4 +100,8 @@ a {
 
 .ios .dis-scroll {
   position: relative;
+}
+
+i.fa-brands {
+  font-style: normal;
 }
