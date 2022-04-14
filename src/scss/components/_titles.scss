@@ -8,7 +8,7 @@
   line-height: 6rem;
   &--fs14 {
     font-size: 1.4rem;
-    line-height: 2.1rem;
+    line-height: 1.5;
   }
   &--fs16 {
     font-size: 1.6rem;
@@ -19,5 +19,28 @@
   }
   &--fs48 {
     font-size: 4.8rem;
+  }
+
+  &--center {
+    text-align: center;
+  }
+  &--w-circle {
+    @include circle-left;
+  }
+  &--center-w-circle {
+    text-align: center;
+    @include circle-center;
+  }
+
+  &--underline {
+    @include underline;
+    &-center {
+      @include underline;
+      margin-bottom: 25px;
+      &::after {
+        left: 50%;
+        transform: translate3d(-50%, 0, 0);
+      }
+    }
   }
 }

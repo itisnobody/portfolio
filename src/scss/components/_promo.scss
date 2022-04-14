@@ -6,9 +6,6 @@
   &__inner {
     max-width: 500px;
   }
-  &__pretitle {
-    @include circle-left;
-  }
   &__title {
     margin-top: 16px;
   }
