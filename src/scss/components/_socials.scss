@@ -2,12 +2,9 @@
   display: flex;
   align-items: center;
   &__title {
-    color: #000;
-    font-family: var(--font-family);
-    font-style: normal;
     font-weight: 700;
     font-size: 1.6rem;
-    line-height: 2.4rem;
+    line-height: 1.5;
     margin: 0;
     &::after {
       content: '';
