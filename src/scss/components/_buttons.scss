@@ -6,8 +6,9 @@
   font-weight: 700;
   font-size: 1.4rem;
   line-height: 1.5;
+  cursor: pointer;
   &--fill {
-    background: #FFA501;
+    background: var(--main-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   }
 }

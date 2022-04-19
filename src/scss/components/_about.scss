@@ -1,24 +1,38 @@
 .about {
   padding: 120px 0;
+  @include small-tablet {
+    padding: 40px 0;
+  }
   &__container {
     display: grid;
-    grid-template-columns: minmax(360px, 1fr) minmax(684px, 1.9fr);
+    grid-template-columns: minmax(350px, 1fr) minmax(300px, 1.9fr);
     grid-template-rows: minmax(240px, auto);
     grid-auto-rows: minmax(240px, auto);
+    justify-content: space-between;
+    gap: 40px 30px;
+    @include small-tablet {
+      grid-template-columns: 1fr;
+    }
   }
   &__photo {
+    @include small-tablet {
+      max-height: 90vh;
+    }
     img {
       @include cover;
     }
   }
   &__content {
-    padding: 0 70px;
+    padding-right: 70px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, minmax(80px, auto));
     grid-auto-flow: row;
     grid-auto-rows: minmax(84px, auto);
     gap: 20px;
+    @include desktop {
+      padding-right: 0;
+    }
   }
   &__title {
     margin-top: 6px;
@@ -33,11 +47,17 @@
   }
   &__txt {
     margin: 24px 0 0;
+    @include mobile {
+      margin-top: 20px;
+    }
   }
   &__skill {
     display: grid;
     grid-template-columns: 36px 1fr;
     column-gap: 24px;
+    @include tablet {
+      grid-column: 1 / 3;
+    }
     &-title {
       text-align: left;
     }
@@ -50,7 +70,7 @@
       height: 36px;
       width: 36px;
       border-radius: 50%;
-      background-color: #FFA501;
+      background-color: var(--main-color);
       position: relative;
       img {
         position: absolute;

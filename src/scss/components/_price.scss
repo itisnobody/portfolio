@@ -8,6 +8,13 @@
     grid-auto-rows: minmax(21px, auto);
     gap: 16px 32px;
     justify-content: space-between;
+    @include desktop {
+      padding: 60px 0;
+    }
+    @include small-tablet {
+      padding: 20px 0;
+      grid-template-columns: 1fr;
+    }
   }
   &__item {
     position: relative;
@@ -20,12 +27,15 @@
     align-items: center;
     font-size: 1.4rem;
     line-height: 1.5;
+    @include mobile {
+      align-items: start;
+    }
     &::before {
       content: '';
       display: block;
       height: 15px;
       width: 15px;
-      background-color: #FFA501;
+      background-color: var(--main-color);
       border-radius: 50%;
       position: absolute;
       left: 0;
@@ -33,7 +43,7 @@
     }
   }
   &__title {
-    white-space: nowrap;
+    // white-space: nowrap;
   }
   &__cost {
     justify-self: end;

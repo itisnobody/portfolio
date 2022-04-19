@@ -4,8 +4,18 @@
     margin: 0 auto;
     max-width: 968px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
     column-gap: 100px;
+    justify-content: space-between;
+    @include small-tablet {
+      padding: 40px 0;
+      grid-template-columns: 1fr;
+    }
+  }
+  &__column {
+    @include small-tablet {
+      @include mb(4rem);
+    }
   }
   &__list {
     margin: 0;
@@ -13,14 +23,11 @@
     list-style: none;
     border-left: 1px solid #000;
     &-title {
-      margin-bottom: 45px;
+      margin: 0 0 45px;
       position: relative;
       padding-left: 43px;
-      color: #000;
-      font-family: var(--font-family);
-      font-style: normal;
       font-weight: 700;
-      font-size: 20px;
+      font-size: 2rem;
       line-height: 1.5;
       &::before {
         content: '';
@@ -28,7 +35,7 @@
         height: 15px;
         width: 15px;
         border-radius: 50%;
-        background-color: #FFA501;
+        background-color: var(--main-color);
         position: absolute;
         top: 50%;
         left: 0;
@@ -46,8 +53,11 @@
       }
     }
     &-item {
-      @include mb(4.5rem);
       position: relative;
+      @include mb(4.5rem);
+      @include mobile {
+        @include mb(1rem);
+      }
       &::before {
         content: '';
         display: block;
@@ -66,16 +76,20 @@
   &__card {
     &-grid {
       display: grid;
-      grid-template-columns: 36px 339px;
+      grid-template-columns: 36px minmax(190px, 339px);
       grid-template-rows: 36px minmax(36px auto);
       row-gap: 20px;
       column-gap: 15px;
+      @include small-tablet {
+        grid-template-columns: 36px minmax(190px, auto);
+        column-gap: 20px;
+      }
     }
     &-icon {
       height: 36px;
       width: 36px;
       border-radius: 50%;
-      background-color: #FFA501;
+      background-color: var(--main-color);
       position: relative;
       img {
         position: absolute;
@@ -84,7 +98,6 @@
         max-width: 100%;
       }
     }
-    &-header {}
     &-title {
       margin: 0;
       font-weight: 700;

@@ -1,16 +1,16 @@
 .menu {
   position: fixed;
-  height: 100vh;
+  height: var(--vh);
   width: 100vw;
-  z-index: 0;
+  z-index: -1;
   background-color: transparent;
   transition: z-index .4s ease;
   &__wrapper {
     height: 100vh;
-    width: 80vw;
+    width: 78.125vw;
     max-width: 345px;
     padding: 17.5vh 45px 6.25vh 40px;
-    background-color: #FFA501;
+    background-color: var(--main-color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -19,6 +19,9 @@
     z-index: 11;
     transform: translate3d(-345px, 0, 0);
     transition: transform .4s ease;
+    @include mobile {
+      padding: 17.5vh 20px 6.25vh;
+    }
   }
   &__close {
     height: 4.5rem;

@@ -1,11 +1,21 @@
 .portfolio {
   padding: 60px 0;
+  @include small-tablet {
+    padding: 40px 0;
+  }
   &__list {
     padding-top: 60px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, auto);
-    grid-auto-rows: repeat(2, auto);
+    grid-template-rows: repeat(2, 280px);
+    grid-auto-rows: 280px;
+    @include small-tablet {
+      padding-top: 40px;
+      grid-template-columns: 1fr 1fr;
+    }
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
     gap: 4px;
     .vertical {
       grid-column: 4/5;
@@ -14,6 +24,12 @@
     .horizontal {
       grid-column: 2/4;
       grid-row: 2/3;
+    }
+    .vertical, .horizontal {
+      @include small-tablet {
+        grid-column: unset;
+        grid-row: unset;
+      }
     }
   }
   &__item {

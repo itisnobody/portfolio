@@ -1,15 +1,27 @@
 .contacts {
   padding: 60px 0 90px;
+  @include small-tablet {
+    padding: 40px 0 50px;
+  }
   &__grid {
     padding: 0 35px 0 50px;
     display: grid;
-    grid-template: auto / 400px 585px;
+    grid-template: auto / minmax(300px, 400px) minmax(320px, 585px);
     justify-content: space-between;
     column-gap: 35px;
+    @include desktop {
+      padding: 0;
+    }
+    @include small-tablet {
+      grid-template-columns: 1fr;
+    }
   }
   &__photo {
+    @include small-tablet {
+      display: none;
+    }
     img {
-      display: block;
+      @include cover;
     }
   }
   &__socials, &__txt, &__form {
@@ -22,6 +34,9 @@
     gap: 30px 25px;
     font-size: 1.2rem;
     line-height: 1.5;
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
   }
   &__input {
     position: relative;
@@ -44,7 +59,16 @@
       background-color: #fff;
     }
   }
-  &__input-textarea {
+  &__input-textarea, &__trigger {
     grid-column: 1/3;
+    @include mobile {
+      grid-column: unset;
+    }
+  }
+  &__trigger {
+    @include mobile {
+      display: flex;
+      justify-content: center;
+    }
   }
 }

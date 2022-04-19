@@ -13,9 +13,20 @@
   }
   &--fs36 {
     font-size: 3.6rem;
+    @include small-tablet {
+      font-size: 2.4rem;
+      line-height: 1.5;
+    }
   }
   &--fs48 {
     font-size: 4.8rem;
+    @include small-tablet {
+      font-size: 3.6rem;
+      line-height: 3.9rem;
+    }
+    @include mobile {
+      font-size: 2.6rem;
+    }
   }
 
   &--center {
@@ -34,6 +45,9 @@
     &-center {
       @include underline;
       margin-bottom: 25px;
+      @include mobile {
+        margin-bottom: 15px;
+      }
       &::after {
         left: 50%;
         transform: translate3d(-50%, 0, 0);
