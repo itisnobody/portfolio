@@ -30,9 +30,29 @@
     color: inherit;
     font-size: 0;
     line-height: 1;
+    transition: color .1s ease;
+    &:active {
+      color: var(--main-color);
+    }
+    @include hover {
+      color: var(--main-color);
+    }
     i {
       font-size: 2rem;
       line-height: inherit;
+    }
+  }
+}
+
+.menu {
+  .socials {
+    &__link {
+      &:active {
+        color: #fff;
+      }
+      @include hover {
+        color: #fff;
+      }
     }
   }
 }

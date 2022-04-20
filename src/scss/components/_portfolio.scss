@@ -34,6 +34,10 @@
   }
   &__item {
     display: block;
+    transition: filter .1s ease;
+    @include hover {
+      filter: saturate(110%) contrast(130%);
+    }
   }
   &__img {
     @include cover;

@@ -22,6 +22,7 @@ const htmlmin = require('gulp-htmlmin');
 const gulpif = require('gulp-if');
 const notify = require('gulp-notify');
 const image = require('gulp-imagemin');
+const ghPages = require('gulp-gh-pages');
 const {
   readFileSync
 } = require('fs');
@@ -324,6 +325,11 @@ const toProd = (done) => {
   done();
 };
 
+const deploy = () => {
+  return src(`${buildFolder}/**/*`)
+    .pipe(ghPages());
+};
+
 exports.default = series(clean, htmlInclude, scripts, styles, resources, images, webpImages, avifImages, svgSprites, watchFiles);
 
 exports.backend = series(clean, htmlInclude, scriptsBackend, stylesBackend, resources, images, webpImages, avifImages, svgSprites)
@@ -333,3 +339,5 @@ exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, i
 exports.cache = series(cache, rewrite);
 
 exports.zip = zipFiles;
+
+exports.deploy = deploy;

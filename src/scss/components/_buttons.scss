@@ -7,8 +7,22 @@
   font-size: 1.4rem;
   line-height: 1.5;
   cursor: pointer;
+  transition: background .1s ease, color .1s ease;
+  @include hover {
+    background: rgba(0, 0, 0, .05);
+  }
+  &:active {
+    background: rgba(0, 0, 0, .1);
+    color: #3d3d3d;
+  }
   &--fill {
     background: var(--main-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    @include hover {
+      background: var(--second-color);
+    }
+    &:active {
+      background: var(--second-dark-color);
+    }
   }
 }

@@ -46,6 +46,11 @@
       padding: 12px 20px 13px;
       border: 1px solid #000;
       line-height: inherit;
+      &:focus-visible,
+      &.focus-visible {
+        outline: none;
+        border-color: var(--main-color);
+      }
     }
     textarea {
       resize: none;

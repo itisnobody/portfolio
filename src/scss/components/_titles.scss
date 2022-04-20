@@ -33,6 +33,7 @@
     text-align: center;
   }
   &--w-circle {
+    display: inline-block;
     @include circle-left;
   }
   &--center-w-circle {
