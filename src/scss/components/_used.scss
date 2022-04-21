@@ -4,13 +4,13 @@
     padding: 0;
   }
   &__grid {
-    padding: 60px 10.5px 0;
+    padding: 60px 0 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, 270px);
     grid-template-rows: repeat(2, minmax(270px, auto));
     grid-auto-rows: minmax(270px, auto);
     gap: 13px;
-    padding: 60px 0 0;
+    justify-content: center;
     @include mobile {
       padding-top: 20px;
     }

@@ -2,13 +2,13 @@
   position: fixed;
   top: 0;
   bottom: 0;
-  height: var(--vh);
+  height: 100%;
   width: 100vw;
   z-index: -1;
   background-color: transparent;
   transition: z-index .4s ease;
   &__wrapper {
-    height: 100vh;
+    height: 100%;
     width: 78.125vw;
     max-width: 345px;
     padding: 17.5vh 45px 6.25vh 40px;

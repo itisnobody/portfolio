@@ -46,6 +46,7 @@
       padding: 12px 20px 13px;
       border: 1px solid #000;
       line-height: inherit;
+      transition: border-color .1s ease;
       &:focus-visible,
       &.focus-visible {
         outline: none;

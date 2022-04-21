@@ -1,8 +1,12 @@
-<section class="contacts">
+<section class="contacts" id="contacts">
   <div class="container">
     <div class="contacts__grid">
       <div class="contacts__photo">
-        <img src="img/main_photo.jpg" alt="Photo">
+        <picture>
+          <source srcset="img/main_photo.webp" type="image/webp">
+          <source srcset="img/main_photo.avif" type="image/avif">
+          <img loading="lazy" src="img/main_photo.jpg" alt="Photo">
+        </picture>
       </div>
 
       <div class="contacts__content">
@@ -32,5 +36,6 @@
           </div>
         </form>
       </div>
+    </div>
   </div>
 </section>

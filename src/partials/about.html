@@ -1,7 +1,16 @@
-<section class="about">
+<section class="about" id="about">
   <div class="container about__container">
     <div class="about__photo">
-      <img src="img/main_photo.jpg" alt="Photo">
+      <!-- <img srcset="img/main_photo-min.jpg 300w,
+                   img/main_photo.jpg 400w"
+            sizes="(max-width: 400px) 280px,
+                   (min-width: 401px) 400px"
+      src="img/main_photo.jpg" alt="Photo"> -->
+      <picture>
+        <source srcset="img/main_photo.webp" type="image/webp">
+        <source srcset="img/main_photo.avif" type="image/avif">
+        <img loading="lazy" src="img/main_photo.jpg" alt="Photo">
+      </picture>
     </div>
     <div class="about__content">
       <div class="about__description">
